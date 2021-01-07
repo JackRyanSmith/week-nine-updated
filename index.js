@@ -1,8 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const util = require("util");
-const gm = require("./utils/generateMarkdown.js");
-​
+const gm = require("./utils/Generate.js");
+
 // Required Fields
 // Title
 // Description
@@ -13,17 +12,17 @@ const gm = require("./utils/generateMarkdown.js");
 // Contributing
 // Tests
 // Questions
-​
+
 let readme_filled_out;
-​
+
 inquirer.prompt([{
         type: "input",
-        message: "What is your project?",
+        message: "What is your project title?",
         name: "title"
     },
     {
         type: "input",
-        message: "What is your project",
+        message: "What is the description of your project?",
         name: "description"
     },
     {
@@ -50,7 +49,7 @@ inquirer.prompt([{
     },
     {
         type: "input",
-        message: "how do you run tests on your project?",
+        message: "How do you run tests on your project?",
         name: "tests",
         default: "npm test"
     },
@@ -68,14 +67,14 @@ inquirer.prompt([{
     readme_filled_out = gm(response);
     writeToFile("README_Generated.md", readme_filled_out);
 });
-​
+
 // function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, function (err) {
         if (err) {
             return console.log(err);
         }
-​
+
         console.log("Success!");
     });
 }

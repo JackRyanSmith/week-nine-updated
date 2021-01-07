@@ -9,6 +9,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^6.5.2"
-  }
+    "inquirer": "^6.5.2",
+    "utils": "^0.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JackRyanSmith/week-nine-updated.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/JackRyanSmith/week-nine-updated/issues"
+  },
+  "homepage": "https://github.com/JackRyanSmith/week-nine-updated#readme"
 }
